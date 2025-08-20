@@ -1,0 +1,31 @@
+Linux Kernel Greater than 1.3 is assumed!!!
+
+To Install:
+
+  mv *.psf  /usr/lib/kbd/consolefonts/
+  mv src/ethiopic.uni  /usr/lib/kbd/consoletrans/
+  mv fidel*  /usr/local/bin/
+
+
+To Start Ethiopic and UTF in your Console
+
+  fidel_start
+  (this loads "Agafari-16.psf)
+
+
+To Switch Ethiopic font files:
+
+  setfont NewFontName.psf
+
+
+To View Provided UTF8 files:
+
+  cat Fidel.utf Unicode.utf
+  less -r Unicode.utf
+  more Unicode.utf
+
+
+To Stop UTF in your Console
+
+  fidel_stop
+

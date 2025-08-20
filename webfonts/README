@@ -1,0 +1,110 @@
+
+These fonts are the first in a series for Ethiopic Web 
+under Netscape 2.0+.  Short file names are used so that
+they may be stored in compressed format and read from
+Xservers (this maybe only a Linux compress limitation).
+
+
+To Install Fonts:
+=================
+
+A ``Makefile'' is now provided.  If you have GNU Make and a nice X11 system
+all should go as  smoothly as the two commands:
+
+ 1)  make 
+ 2)  make install 
+
+
+That's It!!!
+
+
+If you did get an error of some sort do the following by hand:
+
+ bdftopcf fidel11.bdf > fidel11.pcf
+ bdftopcf fidel12.bdf > fidel12.pcf
+ bdftopcf fidel15.bdf > fidel15.pcf
+ bdftopcf fidel18.bdf > fidel18.pcf
+ bdftopcf fidel20.bdf > fidel20.pcf
+
+ compress *.pcf
+ gzip *.bdf          -this step is NOT optional
+ xset fp+ `pwd`
+
+
+This should work unless:
+
+ 1) At your site you do not have permission to add fonts to the X server.
+ 2) You are on an older Sun OpenWindows systems and can't use .pcf files.
+    Try ``man fontconvert'' to convert and install bdf fonts.
+
+---------------------------------------------------------------------
+
+Recommended Netscapes default sizes are:
+
+Select Size 12 from Proportional Font menu and Size 11 from Fixed Font
+ menu, defaults then set to:
+
+  <h1> = fidel 20
+  <h2> = fidel 18
+  <h3> = fidel 15
+  <h4> = fidel 12
+  <font size=-1> = fidel 11
+  <pre> = fidel 11
+
+
+Examine and experiment with sizes using the provided fontsizes.html file.
+
+
+Font Notes:
+
+
+  fidel12.bdf  is the complete Unicode font with extensions.
+  fidel18.bdf and fidel11.bdf  do not complete the Unicode domain nor offer
+              extensions.
+  fidel15.bdf and fidel20.bdf  complete the Unicode domain but do not offer
+              extensions.
+  fidel20.bdf is really size 30
+  
+
+
+To Set Up Netscape 2.0+ For Fidel on X11
+========================================
+
+
+  1. Add to your .Xresources or .Xdefaults the line: 
+
+       netscape*menuBar*jaAuto.labelString: Ethiopic (Uni-JIS) 
+
+     ...or some description that makes you happy :-) 
+
+  2. Restart your X server (I forget how to do this) or exit X and restart
+     (could mean logout and log back in). 
+
+  3. Start Netscape 
+
+  4. Under the ``Options'' menu select ``Language Encoding'' and then
+     choose the 3rd item which should say ``Ethiopian (Uni-JIS)''. 
+     [It will still say ``Japanese (Auto-Select)'' if you did not restart X.] 
+
+  5. Select ``Options'' one more time and choose ``General Preferences...'' 
+     When you have the folders menu select ``Fonts''. 
+
+  6. From ``Use the Proportional Font'' select ``Fidel (Admas)'' and Size: ``12''. 
+       For ``Use the Fixed Font'' select ``Fidel (Admas)'' and Size: ``11''. 
+
+  7. Select ``Options'' one more time and now choose ``Save_Options''. 
+
+  8. Open the provided file ``fidel.html''. You should find 411 characters
+     in an extended Unicode matrix. Also see ``fontsizes.html''. 
+
+  9. Write me please to report any successes or failures. 
+
+
+
+Additional Info :
+
+  http://www.cs.indiana.edu/hyplan/dmulholl/admas/jis/
+
+Samples:
+
+  http://www.cs.indiana.edu/hyplan/dmulholl/fidel/let/

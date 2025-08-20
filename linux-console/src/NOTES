@@ -1,0 +1,23 @@
+
+These are the Ethiopic source files that generated the .psf in the
+directory above.  Initial work was done for the size 16 fonts using
+the "xfed" editor under X Windows.  
+
+Sizes 14 and 12 are essentially just size 16 with extra scan lines
+chopped off and minimal extra work done to repair damaged characters.
+Except in GohaClassic (an unmodified port of the Goha WP font) the fonts
+are all using the same punctuation and number characters which are also
+provided in their own source files.  Keep in mind also that console 
+fonts have an 8 dot width limit.
+
+The Goha, GohaA, and GohaB font differ only by the design of the "le"
+series.  Feedback would be appreciated to resolve which vesion is
+preffered.
+
+I have not tried installing the bdf files under X Windows but they should
+work.  The 16 point fonts could be applied in Mule.  Should anyone actually
+make the effort to enhance the fonts, please let me know!!!!
+
+Daniel Yacob  
+Sat Jan  4 19:20:59 EET 1997
+<Daniel_Yacob_at_UNECA@un.org>

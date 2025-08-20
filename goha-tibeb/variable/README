@@ -1,0 +1,23 @@
+Goha24uni.bdf is the conversion of the et08rpn.sfp and eu08rpn.sfp into PK
+with hp2pk.  The font becomes a 24 point font at 100 dpi settings and becomes
+a Unicode 3.0 compliant font with the following characters added:
+
+
+Added Chars
+===========
+HWa
+`sWa
+QWe-QW
+hWE
+De-DWa
+jWa
+Ge-Go
+PWa
+pWa
+mYa, rYa, fYa
+: , :- `? :|:
+
+
+MISC
+====
+Looks like every character needs a leftward shift of two pixels.
